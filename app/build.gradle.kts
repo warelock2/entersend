@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.entersend"
+    namespace = "com.afobl.entersend"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.entersend"
+        applicationId = "com.afobl.entersend"
         minSdk = 26
         targetSdk = 34
         versionCode = 1

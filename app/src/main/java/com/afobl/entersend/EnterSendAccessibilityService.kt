@@ -1,4 +1,4 @@
-package com.example.entersend
+package com.afobl.entersend
 
 import android.accessibilityservice.AccessibilityService
 import android.os.Build

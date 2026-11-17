@@ -1,4 +1,4 @@
-package com.example.entersend
+package com.afobl.entersend
 
 import android.content.Intent
 import android.os.Bundle
