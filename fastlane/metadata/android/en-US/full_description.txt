@@ -1,0 +1,23 @@
+EnterSend is a lightweight Android accessibility app for GrapheneOS "Messaging" that automatically sends a message when you press Enter.
+
+## Backstory
+
+I wrote this app because I was using scrcpy to use my PC keyboard to type in and send text messages on my GrapheneOS phone. However, the Enter key just inserted carriage returns into the text, rather than sending the text message. EnterSend intercepts the Enter key press and automatically clicks the "Send Message" button, making it seamless to type and send messages using a physical keyboard.
+
+## Features
+
+- Send on Enter: Automatically clicks the send button when you press Enter.
+- Targeted: Only active when GrapheneOS "Messaging" (or AOSP Messaging) is open.
+- Lightweight: Minimal footprint accessibility service.
+- Compose-aware: Handles Jetpack Compose UI trees where the send button label sits on a non-clickable leaf node.
+
+## Usage
+
+1. Install the app and enable the EnterSend accessibility service in Android Settings.
+2. Open GrapheneOS Messaging.
+3. Type your message.
+4. Press Enter — the message is sent automatically.
+
+## License
+
+This project is licensed under the GNU General Public License v3.0.
