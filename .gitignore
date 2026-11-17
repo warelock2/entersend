@@ -1,0 +1,39 @@
+# Gradle
+.gradle/
+build/
+app/build/
+*.gradle
+!settings.gradle.kts
+!build.gradle.kts
+
+# Android Studio
+.idea/
+*.iml
+*.ipr
+*.iws
+local.properties
+
+# APK outputs
+*.apk
+*.ap_
+*.aab
+
+# Keystores
+*.jks
+*.keystore
+
+# Log files
+*.log
+
+# Session / temp files
+session.json
+session.list
+RESTART.md
+hologram_vault.db
+
+# Graphify output
+graphify-out/
+
+# OS files
+.DS_Store
+Thumbs.db
