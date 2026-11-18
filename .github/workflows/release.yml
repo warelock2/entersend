@@ -7,20 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-forgejo:
-    if: github.event.repository.owner.login != 'warelock2'
-    runs-on: docker
-    container:
-      image: stden/android:latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Build Debug APK
-        run: ./gradlew assembleDebug
-
-  build-github:
-    if: github.event.repository.owner.login == 'warelock2'
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code

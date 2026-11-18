@@ -1,0 +1,19 @@
+name: Build APK (Forgejo)
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: docker
+    container:
+      image: stden/android:latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build Debug APK
+        run: ./gradlew assembleDebug
