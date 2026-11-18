@@ -4,11 +4,12 @@ on:
   push:
     tags:
       - 'v*'
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ${{ github.event.repository.owner.login == 'warelock2' && 'ubuntu-latest' || 'docker' }}
-    container: ${{ github.event.repository.owner.login == 'warelock2' && '' || 'budtimo/docker-android:latest-ndk' }}
+    container: ${{ github.event.repository.owner.login == 'warelock2' && '' || 'stden/android:latest' }}
 
     steps:
       - name: Checkout code
