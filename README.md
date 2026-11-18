@@ -1,3 +1,5 @@
+![EnterSend](images/entersend-icon.svg)
+
 # EnterSend
 
 An Android accessibility app for GrapheneOS "Messaging" that automatically sends a message when you press Enter. The accessibility service is only active when the GrapheneOS "Messaging" app is open.
