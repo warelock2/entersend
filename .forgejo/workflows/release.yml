@@ -45,12 +45,14 @@ jobs:
             RELEASE_TAG="manual-$GITHUB_RUN_ID"
           fi
           RELEASE_JSON=$(printf '{"tag_name":"%s","name":"EnterSend %s","draft":false}' "$RELEASE_TAG" "$RELEASE_TAG")
-          RELEASE_ID=$(curl --fail-with-body -sS -X POST \
+          RELEASE_RESPONSE=$(curl -k --fail-with-body -sS -X POST \
             -H "Authorization: token $FORGEJO_TOKEN" \
             -H "Content-Type: application/json" \
             "$GITHUB_API_URL/repos/$GITHUB_REPOSITORY/releases" \
-            -d "$RELEASE_JSON" | python3 -c 'import json,sys; print(json.load(sys.stdin)["id"])')
-          curl --fail-with-body -sS -X POST \
+            -d "$RELEASE_JSON")
+          RELEASE_ID=$(printf '%s' "$RELEASE_RESPONSE" | sed -n 's/.*"id":\([0-9][0-9]*\).*/\1/p')
+          test -n "$RELEASE_ID"
+          curl -k --fail-with-body -sS -X POST \
             -H "Authorization: token $FORGEJO_TOKEN" \
             -H "Content-Type: application/vnd.android.package-archive" \
             --data-binary @app/build/outputs/apk/debug/app-debug.apk \
