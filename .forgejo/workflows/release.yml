@@ -20,4 +20,4 @@ jobs:
           git checkout --detach FETCH_HEAD
 
       - name: Build Debug APK
-        run: ./gradlew assembleDebug
+        run: gradle --no-daemon assembleDebug
