@@ -31,7 +31,7 @@ export ANDROID_HOME=/path/to/android-sdk
 
 ## Installation
 1. Build the APK or download it from releases.
-2. Install via ADB: `adb install -r app-debug.apk`
+2. Install via ADB: `adb install -r entersend-vX.Y.Z.apk`
 3. Open Android Settings → Accessibility → EnterSend and enable the service.
 
 ## License
