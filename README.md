@@ -1,4 +1,4 @@
-![EnterSend](images/entersend-icon.svg)
+<img src="images/entersend-icon.svg" alt="EnterSend" width="300">
 
 # EnterSend
 
